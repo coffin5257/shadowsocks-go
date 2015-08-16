@@ -9,6 +9,6 @@ ENV TIMEOUT 300
 
 EXPOSE $SERVER_PORT
 
-CMD ["-p $SERVER_PORT","-k $PASSWORD","-m $METHOD","-t $TIMEOUT","-d"]
+CMD shadowsocks-server -s $SERVER_ADDR -p $SERVER_PORT -k $PASSWORD -m $METHOD -t $TIMEOUT -d
 
-ENTRYPOINT ["shadowsocks-server"]
+#ENTRYPOINT ["shadowsocks-server"]
